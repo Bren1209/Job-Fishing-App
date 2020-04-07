@@ -4,9 +4,9 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-#######################
-###  Scraping Data  ###
-#######################
+##########################################
+###  Fetching Python-related job data  ###
+##########################################
 
 print('FETCHING DATA...\n')
 
@@ -22,19 +22,19 @@ soup_indeed = BeautifulSoup(r_indeed, 'html.parser')
 soup_careers24 = BeautifulSoup(r_careers24, 'html.parser')
 soup_pnet = BeautifulSoup(r_pnet, 'html.parser')
 
+
+###################################################
+###  Functions to add first page data to lists  ###
+###################################################
+
 indeed_desc = []
 indeed_links = []
-
 
 careers24_desc = []
 careers24_links = []
 
 pnet_desc = []
 pnet_links = []
-
-###################
-###  Functions  ###
-###################
 
 
 def get_indeed():
@@ -103,9 +103,9 @@ for i in range(len(pnet_desc)):
 
 
 
-#####################
-###  Email stuff  ###
-#####################
+########################################
+###  Send email from email to email  ###
+########################################
 
 print('BUILDING EMAIL...\n')
 
